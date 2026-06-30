@@ -17,7 +17,7 @@ from collections.abc import (
     ValuesView,
 )
 from importlib.machinery import ModuleSpec
-from typing import Any, ClassVar, Literal, ParamSpec, TypeVar, Union, final, overload  # noqa: Y037
+from typing import Any, ClassVar, Literal, ParamSpec, TypeVar, final, overload  # noqa: Y037
 from typing_extensions import Self, TypeAliasType, TypeVarTuple, deprecated, disjoint_base
 
 if sys.version_info >= (3, 14):
@@ -720,7 +720,7 @@ class EllipsisType: ...
 class NotImplementedType(Any): ...
 
 if sys.version_info >= (3, 14):
-    UnionType = Union
+    from typing import Union as UnionType
 else:
     @final
     class UnionType:
