@@ -253,6 +253,7 @@ if sys.version_info >= (3, 14):
         # you can only subscript a `Union` instance if at least one of the elements
         # in the union is TypeVar or a generic alias instance that has a non-empty `__parameters__`
         def __getitem__(self, parameters: Any, /) -> object: ...
+        def __mro_entries__(self, bases: Iterable[object], /) -> NoReturn: ...
 
 else:
     Union: _SpecialForm
